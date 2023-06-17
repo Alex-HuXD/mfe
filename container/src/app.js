@@ -4,7 +4,7 @@ import MarketingApp from './components/MarketingApp'
 const App = () => {
     return (
         <div>
-            <h1>Hi container!</h1>
+            <h1>Hi container!! auto validation!!</h1>
             <hr />
             <MarketingApp />
         </div>
