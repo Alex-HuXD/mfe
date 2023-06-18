@@ -16,7 +16,7 @@ const App = ({ history }) => {
                 <Router history={history}>
                     <Switch>
                         <Route exact path="/pricing" component={Pricing} />
-                        <Route path="/" component={Landing} />
+                        <Route exact path="/" component={Landing} />
                     </Switch>
                 </Router>
             </StylesProvider>
