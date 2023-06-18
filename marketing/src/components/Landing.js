@@ -66,7 +66,7 @@ const cards = [
     'software',
     'office',
     'laptop',
-    'it',
+    'IT',
     'notepad',
     'desktop',
     'macbook',
@@ -96,7 +96,7 @@ export default function Album() {
                             don&apos;t simply skip over it entirely.
                         </Typography>
                         <div className={classes.heroButtons}>
-                            <Grid container spacing={2}>
+                            <Grid container spacing={2} justifyContent="center">
                                 <Grid item>
                                     <Link to="/pricing">
                                         <Button variant="contained" color="primary">
@@ -132,7 +132,7 @@ export default function Album() {
                                         </Typography>
                                         <Typography>
                                             This is a media card. You can use this section to
-                                            describe the content.
+                                            describe the content!
                                         </Typography>
                                     </CardContent>
                                     <CardActions>
