@@ -24,7 +24,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
 
 //when development in isolation, call mount immediately
 if (process.env.NODE_ENV === 'development') {
-    const root = document.getElementById('dev-marketing-root')
+    const root = document.getElementById('dev-auth-root')
     root && mount(root, { defaultHistory: createBrowserHistory() })
 }
 
