@@ -1,5 +1,6 @@
-import React, { lazy, Suspense, useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import React, { lazy, Suspense, useState, useEffect } from 'react'
+import { Router, Route, Switch, Redirect } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
 
 import Header from './components/Header'
 import Loading from './components/Loading'
@@ -13,10 +14,16 @@ const generateClassName = createGenerateClassName({
     productionPrefix: 'container',
 })
 
+const history = createBrowserHistory()
+
 const App = () => {
     const [isSignedIn, setIsSignedIn] = useState(false)
+
+    useEffect(() => {
+        isSignedIn && history.push('/dashboard')
+    }, [isSignedIn])
     return (
-        <Router>
+        <Router history={history}>
             <StylesProvider generateClassName={generateClassName}>
                 <div>
                     <Header isSignedIn={isSignedIn} onSignOut={() => setIsSignedIn(false)} />
@@ -25,7 +32,10 @@ const App = () => {
                             <Route path="/auth">
                                 <AuthAppLazy onSignIn={() => setIsSignedIn(true)} />
                             </Route>
-                            <Route path="/dashboard" component={DashboardAppLazy} />
+                            <Route path="/dashboard">
+                                {!isSignedIn && <Redirect to="/" />}
+                                <DashboardAppLazy />
+                            </Route>
                             <Route path="/" component={MarketingAppLazy} />
                         </Suspense>
                     </Switch>
