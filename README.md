@@ -2,7 +2,9 @@
 
 [AWS Cloudfront Demo Site](https://d1295icdn4fwjo.cloudfront.net)
 
-This microfrontend app is built using Webpack Module Federation and serves as a boilerplate for developing a software-as-a-service (SaaS) product or similar applications. It employs a modular and scalable front-end architecture by combining multiple microfrontends, including a shell app, an authentication app, a marketing app, and a dashboard app.
+This microfrontend app is built using Webpack Module Federation and serves as a boilerplate for developing a software-as-a-service (SaaS) product or similar applications. It employs a modular and scalable front-end architecture by combining multiple microfrontends, including a shell app, an authentication app, a marketing app, and a dashboard app. 
+
+The microfrontend application also utilizes GitHub Actions as a CI/CD (Continuous Integration/Continuous Deployment) tool to automate the build and deployment process. It leverages AWS S3 (Simple Storage Service) to store the static files generated during the build process, and AWS CloudFront as a content delivery network (CDN) to distribute the final application and provide faster content delivery to end-users. [checkout the site on AWS CloudFront](https://d1295icdn4fwjo.cloudfront.net) 
 
 ## Microfrontend Overview
 
