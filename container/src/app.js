@@ -7,6 +7,7 @@ import { StylesProvider, createGenerateClassName } from '@material-ui/core/style
 
 const MarketingAppLazy = lazy(() => import('./components/MarketingApp'))
 const AuthAppLazy = lazy(() => import('./components/AuthApp'))
+const DashboardAppLazy = lazy(() => import('./components/DashboardApp'))
 
 const generateClassName = createGenerateClassName({
     productionPrefix: 'container',
@@ -24,6 +25,7 @@ const App = () => {
                             <Route path="/auth">
                                 <AuthAppLazy onSignIn={() => setIsSignedIn(true)} />
                             </Route>
+                            <Route path="/dashboard" component={DashboardAppLazy} />
                             <Route path="/" component={MarketingAppLazy} />
                         </Suspense>
                     </Switch>
