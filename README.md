@@ -1,5 +1,8 @@
 # Microfrontend App with Webpack Module Federation
 
+<img width="1755" alt="Screenshot 2023-08-20 at 4 00 08 PM" src="https://github.com/Alex-HuXD/mfe/assets/69017006/c99cf9b4-f856-4fed-a4de-cd69aa8567bb">
+
+
 [AWS Cloudfront Demo Site](https://d1295icdn4fwjo.cloudfront.net)
 
 This microfrontend app is built using Webpack Module Federation and serves as a boilerplate for developing a software-as-a-service (SaaS) product or similar applications. It employs a modular and scalable front-end architecture by combining multiple microfrontends, including a shell app, an authentication app, a marketing app, and a dashboard app. 
