@@ -5,6 +5,12 @@ import { StylesProvider, createGenerateClassName } from '@material-ui/core/style
 import Landing from './components/Landing'
 import Pricing from './components/Pricing'
 
+// generate more random className to avoid css collisions when app loaded in host
+// *production build use shorter generated css className like jss1, other module use same css in js lib
+// may generated same className, so we need to make it more specific
+
+// following setting make sure all css calssName start with 'marketing', doing so we can
+// sure that our css styleing is scoped.
 const generateClassName = createGenerateClassName({
     productionPrefix: 'maketing',
 })
